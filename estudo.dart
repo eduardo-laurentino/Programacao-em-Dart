@@ -48,16 +48,21 @@ void main() {
   //executaOperacao(5, 9, subtracao);
   //print(numerosDobrados);
   //tipoLista();
+  //tiposAnulaveis();
+  //listasComTipoNull();
   //tipoSet();
   //conjuntoTipoSet();
   //tipoMap();
+
+  /*
   for (int i = 0; i <= 5; i++) {
     listaMap('Eduardo', 'Laurentino', 23, 65.0, 1.65, 'Caxias', 'MA',
         '65604840', '99984553895');
   }
+  */
 
-  mostraMinhaListaMap();
-  mostraPessoasMap();
+  //mostraMinhaListaMap();
+  //mostraPessoasMap();
 }
 
 void tipagem() {
@@ -81,19 +86,18 @@ void tipoDadosBasicos() {
   //Em Dart, o tipo de dados Null é usado para representar a ausência de um valor ou para indicar que uma variável não tem um valor atribuído. No entanto, diferentemente de algumas outras linguagens de programação, em Dart, Null não é um tipo de dados que você pode atribuir diretamente a uma variável. Em vez disso, o valor null é atribuído a variáveis de outros tipos quando não há um valor real presente.
 
   String? name; //Variável 'name' pode conter 'null'
-
-  if (name == null) {
+  if (name != null){
     print("A variável name é nula!");
     print(name);
-  }
-
-  // O operador ?? fornece um valor padrão caso name seja nula
+  }else{
+    // O operador ?? fornece um valor padrão caso name seja nula
   String nameNaoNulo = name ?? 'Valor atribuido para variável nula name';
   print("$nameNaoNulo");
+  }
 
   String? possivelNome; // Variável 'possivelNome' pode conter 'null'
   // '?' -> Indica que a vartiável pode ser nula
-  possivelNome = "valor atribuido a variável nula possivelNome";
+  //possivelNome = "valor atribuido a variável nula possivelNome";
   String nomeNaoNulo = possivelNome!;
   // '!' -> Indica com certeza que a variável não é nula
   print("$nomeNaoNulo\n");
@@ -135,6 +139,28 @@ void tipoDadosBasicos() {
   print(altura);
   print(nome);
   print(solteiro);
+}
+
+void tiposAnulaveis(){
+  // Declaraçã de variáveis anuláveis
+  String? nome;
+  int? idade;
+
+  // Atribuindo valores as variáveis
+  //nome = "Eduardo";
+  //idade = 23;
+
+  if (nome != null){
+    print("Nome: $nome");
+  }else{
+    print("Nome não foi definido!");
+  }
+
+  if (idade != null){
+    print("Idade: $idade");
+  }else{
+    print("Idade não foi definido!");
+  }
 }
 
 void tipoLista() {
@@ -199,6 +225,16 @@ void tipoLista() {
     print("O nome $nomeAverificar não está na lista");
   }
   // Usando a classe List
+}
+
+void listasComTipoNull(){
+  // Uma lista pode ser nula ou receber valores ou não nula com valores nulos
+  List<String?>? listaComNull = ['a', null, 'b', null];
+  print(listaComNull);
+
+  // Adicionando valores nulos a lista
+  listaComNull.add(null);
+  print(listaComNull);
 }
 
 void estruturasDeControle() {
