@@ -86,13 +86,13 @@ void tipoDadosBasicos() {
   //Em Dart, o tipo de dados Null é usado para representar a ausência de um valor ou para indicar que uma variável não tem um valor atribuído. No entanto, diferentemente de algumas outras linguagens de programação, em Dart, Null não é um tipo de dados que você pode atribuir diretamente a uma variável. Em vez disso, o valor null é atribuído a variáveis de outros tipos quando não há um valor real presente.
 
   String? name; //Variável 'name' pode conter 'null'
-  if (name != null){
+  if (name != null) {
     print("A variável name é nula!");
     print(name);
-  }else{
+  } else {
     // O operador ?? fornece um valor padrão caso name seja nula
-  String nameNaoNulo = name ?? 'Valor atribuido para variável nula name';
-  print("$nameNaoNulo");
+    String nameNaoNulo = name ?? 'Valor atribuido para variável nula name';
+    print("$nameNaoNulo");
   }
 
   String? possivelNome; // Variável 'possivelNome' pode conter 'null'
@@ -141,7 +141,7 @@ void tipoDadosBasicos() {
   print(solteiro);
 }
 
-void tiposAnulaveis(){
+void tiposAnulaveis() {
   // Declaraçã de variáveis anuláveis
   String? nome;
   int? idade;
@@ -150,15 +150,15 @@ void tiposAnulaveis(){
   //nome = "Eduardo";
   //idade = 23;
 
-  if (nome != null){
+  if (nome != null) {
     print("Nome: $nome");
-  }else{
+  } else {
     print("Nome não foi definido!");
   }
 
-  if (idade != null){
+  if (idade != null) {
     print("Idade: $idade");
-  }else{
+  } else {
     print("Idade não foi definido!");
   }
 }
@@ -227,7 +227,7 @@ void tipoLista() {
   // Usando a classe List
 }
 
-void listasComTipoNull(){
+void listasComTipoNull() {
   // Uma lista pode ser nula ou receber valores ou não nula com valores nulos
   List<String?>? listaComNull = ['a', null, 'b', null];
   print(listaComNull);
